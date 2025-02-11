@@ -7,7 +7,7 @@
 ## 🎮 Blackjack Game
 [![Play My Blackjack Game](https://img.shields.io/badge/Play-Blackjack%20Now-brightgreen?style=for-the-badge)](https://Kaden-G.github.io)
 
-Short Description: A fun, interactive Blackjack game built with JavaScript. Test your luck against the dealer!
+## A fun, interactive Blackjack game built with JavaScript. Test your luck against the dealer!
 
 ---
 
