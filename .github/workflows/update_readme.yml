@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Update Script
         env:
-          GH_PAT: ${{ secrets.PAT }}  # This secret should be set in your repo settings
+          PAT_TOKEN: ${{ secrets.GH_PAT }}  # This secret should be set in your repo settings
         run: python update_readme.py
 
       - name: Commit and Push Changes
@@ -35,4 +35,4 @@ jobs:
           author_email: github-actions[bot]@users.noreply.github.com
           message: "Automated README update"
           add: "README.md"
-          github_token: ${{ secrets.PAT }}  # Using your PAT to push changes
+          github_token: ${{ secrets.GH_PAT }}  # Using your PAT to push changes
