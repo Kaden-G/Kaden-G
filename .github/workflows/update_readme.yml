@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Update Script
         env:
-          PAT_TOKEN: ${{ secrets.PAT }}  # This secret should be set in your repo settings
+          GH_PAT: ${{ secrets.PAT }}  # This secret should be set in your repo settings
         run: python update_readme.py
 
       - name: Commit and Push Changes
