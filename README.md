@@ -21,14 +21,12 @@ def fetch_all_repos(username, headers):
     per_page = 100
     while True:
         repos_url = f"https://api.github.com/users/{username}/repos?per_page={per_page}&page={page}"
-        print(f"Fetching repositories from {repos_url}")
         response = requests.get(repos_url, headers=headers)
         if response.status_code == 200:
             page_repos = response.json()
             if not page_repos:
                 break
             repos.extend(page_repos)
-            print(f"Fetched {len(page_repos)} repositories from page {page}.")
             page += 1
         else:
             print(f"Failed to fetch repository data. Status code: {response.status_code}")
@@ -37,7 +35,6 @@ def fetch_all_repos(username, headers):
 
 def fetch_languages(repo_name, headers):
     languages_url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{repo_name}/languages"
-    print(f"Fetching languages for repository: {repo_name}")
     lang_response = requests.get(languages_url, headers=headers)
     if lang_response.status_code == 200:
         return lang_response.json()
@@ -46,7 +43,7 @@ def fetch_languages(repo_name, headers):
         return {}
 
 def main():
-    # Optional: Check API rate limits
+    # Check API rate limits (optional)
     rate_limit_url = "https://api.github.com/rate_limit"
     rate_response = requests.get(rate_limit_url, headers=headers)
     if rate_response.status_code == 200:
@@ -59,16 +56,13 @@ def main():
     else:
         print("Failed to fetch API rate limit information.")
 
-    # Fetch repositories data
+    # Fetch repositories
     repos_data = fetch_all_repos(GITHUB_USERNAME, headers)
     total_repos = len(repos_data)
     total_stars = sum(repo.get('stargazers_count', 0) for repo in repos_data)
-    print(f"Total repositories fetched: {total_repos}")
 
-    # Initialize language data storage
+    # Gather language data
     language_data = defaultdict(int)
-
-    # Fetch languages in parallel
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         future_to_repo = {executor.submit(fetch_languages, repo['name'], headers): repo for repo in repos_data}
         for future in concurrent.futures.as_completed(future_to_repo):
@@ -76,13 +70,13 @@ def main():
             for language, size in lang_data.items():
                 language_data[language] += size
 
-    # Calculate language percentages
     total_bytes = sum(language_data.values())
-    language_percentages = {}
-    for language, size in language_data.items():
-        language_percentages[language] = (size / total_bytes) * 100 if total_bytes > 0 else 0
+    language_percentages = {
+        language: (size / total_bytes) * 100 if total_bytes > 0 else 0
+        for language, size in language_data.items()
+    }
 
-    # Create language summary table
+    # Build language summary table
     language_summary = "| Language   | Percentage |\n|------------|-----------:|\n"
     for language, percentage in language_percentages.items():
         language_summary += f"| {language} | {percentage:.2f}% |\n"
@@ -90,7 +84,7 @@ def main():
     # Timestamp for the last update
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # New README content following your updated design
+    # New README content
     readme_content = f"""
 # KADEN GODINEZ
 
@@ -132,13 +126,13 @@ A fun, interactive Blackjack game built with JavaScript. Test your luck against 
 - **LinkedIn:** [linkedin.com/in/kadengodinez](https://www.linkedin.com/in/kadengodinez/)
 """
 
-    # Write the updated README.md
+    # Write the updated content to README.md
     try:
         with open("README.md", "w") as f:
-            f.write(readme_content)
+            f.write(readme_content.strip())
         print("README.md has been updated successfully.")
     except Exception as e:
-        print(f"Failed to write README.md: {e}")
+        print(f"Failed to write to README.md: {e}")
         exit(1)
 
 if __name__ == "__main__":
