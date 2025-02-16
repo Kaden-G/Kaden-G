@@ -6,7 +6,7 @@ import concurrent.futures
 
 # GitHub username and token for authentication
 GITHUB_USERNAME = "Kaden-G"  # Replace with your GitHub username
-GITHUB_TOKEN = os.getenv("PAT_TOKEN")  # Ensure your PAT_TOKEN is set as an environment variable
+GITHUB_TOKEN = os.getenv("GH_PAT")  # Ensure your PAT_TOKEN is set as an environment variable
 
 if not GITHUB_TOKEN:
     print("Error: PAT_TOKEN environment variable is not set.")
