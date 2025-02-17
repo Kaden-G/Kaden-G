@@ -9,7 +9,7 @@ GITHUB_USERNAME = "Kaden-G"  # Replace with your GitHub username
 GITHUB_TOKEN = os.getenv("GH_PAT")  # Ensure your PAT_TOKEN is set as an environment variable
 
 if not GITHUB_TOKEN:
-    print("Error: PAT_TOKEN environment variable is not set.")
+    print("Error: GH_PAT environment variable is not set.")
     exit(1)
 
 # Headers for GitHub API authentication
