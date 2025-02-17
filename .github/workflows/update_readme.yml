@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          ref: main  # Ensures the main branch is being checked out
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -35,4 +35,4 @@ jobs:
           author_email: github-actions[bot]@users.noreply.github.com
           message: "Automated README update"
           add: "README.md"
-          github_token: ${{ secrets.GH_PAT }}  # Using your PAT to push changes
+          github_token: ${{ secrets.GH_PAT }}
