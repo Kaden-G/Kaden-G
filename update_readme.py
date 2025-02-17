@@ -6,8 +6,11 @@ import concurrent.futures
 
 # GitHub username and token for authentication
 GITHUB_USERNAME = "Kaden-G"  # Replace with your GitHub username
-# Use the environment variable "GH_PAT" as set in your GitHub Actions secrets
+# Read the token from the environment variable "GH_PAT"
 GITHUB_TOKEN = os.getenv("GH_PAT")
+
+# Debug: Print whether GH_PAT is set (DO NOT print the actual token)
+print("GH_PAT is set:", bool(GITHUB_TOKEN))
 
 if not GITHUB_TOKEN:
     print("Error: GH_PAT environment variable is not set.")
