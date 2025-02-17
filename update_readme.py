@@ -6,7 +6,8 @@ import concurrent.futures
 
 # GitHub username and token for authentication
 GITHUB_USERNAME = "Kaden-G"  # Replace with your GitHub username
-GITHUB_TOKEN = os.getenv("GH_PAT")  # Ensure your PAT_TOKEN is set as an environment variable
+# Use the environment variable "GH_PAT" as set in your GitHub Actions secrets
+GITHUB_TOKEN = os.getenv("GH_PAT")
 
 if not GITHUB_TOKEN:
     print("Error: GH_PAT environment variable is not set.")
@@ -61,10 +62,13 @@ def main():
     total_repos = len(repos_data)
     total_stars = sum(repo.get('stargazers_count', 0) for repo in repos_data)
 
-    # Gather language data
+    # Gather language data in parallel
     language_data = defaultdict(int)
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
-        future_to_repo = {executor.submit(fetch_languages, repo['name'], headers): repo for repo in repos_data}
+        future_to_repo = {
+            executor.submit(fetch_languages, repo['name'], headers): repo 
+            for repo in repos_data
+        }
         for future in concurrent.futures.as_completed(future_to_repo):
             lang_data = future.result()
             for language, size in lang_data.items():
@@ -76,7 +80,7 @@ def main():
         for language, size in language_data.items()
     }
 
-    # Build language summary table
+    # Build language summary table (markdown formatted)
     language_summary = "| Language   | Percentage |\n|------------|-----------:|\n"
     for language, percentage in language_percentages.items():
         language_summary += f"| {language} | {percentage:.2f}% |\n"
@@ -128,7 +132,7 @@ A fun, interactive Blackjack game built with JavaScript. Test your luck against 
 
     # Write the updated content to README.md
     try:
-        with open("README.md", "w") as f:
+        with open("README.md", "w", encoding="utf-8") as f:
             f.write(readme_content)
         print("README.md has been updated successfully.")
     except Exception as e:
