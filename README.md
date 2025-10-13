@@ -3,6 +3,8 @@
 **Location:** Bay Area, CA  
 **MLOps & AI Infrastructure • DevOps • Cloud • Java/Python**
 
+Curious engineer exploring AI/ML and how it changes systems and products.
+Projects in progress: SmallAI • ClusterGenesis — building toward reproducible MLOps.
 
 ## 🎮 Blackjack Game
 [![Play My Blackjack Game](https://img.shields.io/badge/Play-Blackjack%20Now-brightgreen?style=for-the-badge)](https://Kaden-G.github.io)
