@@ -35,4 +35,4 @@ A fun, interactive Blackjack game built with JavaScript. Test your luck against 
 ## 📬 Contact
 - **Email:** [k.anthony.godinez@gmail.com](mailto:k.anthony.godinez@gmail.com)  
 - **LinkedIn:** [linkedin.com/in/kadengodinez](https://www.linkedin.com/in/kadengodinez/)
-    """.strip()
+    
