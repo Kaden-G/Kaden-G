@@ -1,7 +1,7 @@
 # KADEN GODINEZ
 
 **Location:** Bay Area, CA  
-**DevOps | Cloud | Java & Python Enthusiast**
+**MLOps & AI Infrastructure • DevOps • Cloud • Java/Python**
 
 
 ## 🎮 Blackjack Game
@@ -12,12 +12,22 @@ A fun, interactive Blackjack game built with JavaScript. Test your luck against 
 ---
 
 ## 🔥 Skills & Tech
-- 🐍 Python
-- ☕ Java
-- 🌐 HTML/CSS
-- 🏗️ Terraform
-- 🐳 Docker
-- ☁️ AWS
+★ = proficient, ☆ = familiar
+
+**MLOps & Infra**
+- Docker ★ · Slurm ★ · MLflow ☆ · Prometheus ☆ · Grafana ☆
+
+**Cloud & Automation**
+- AWS (S3, EC2, ECR, IAM) ★ · Terraform ★ · GitHub Actions ★ · CI/CD ★
+
+**ML & Data**
+- Python ★ · scikit-learn ☆ · pandas ★ · NumPy ★
+
+**Languages & Web**
+- Java ★ · SQL ★ · HTML/CSS ☆
+
+**Other**
+- Linux ★ · Bash ★ · Monitoring & Observability ☆
 
 
 ---
