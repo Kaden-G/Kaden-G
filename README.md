@@ -12,8 +12,8 @@ Curious engineer exploring AI/ML and how it changes systems and products.
 A fun, interactive Blackjack game built with JavaScript. Test your luck against the dealer!
 
 ---
-## 📊 Languages in My Public Repositories
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Kaden-G&layout=compact&theme=github_dark&hide_border=true)
+## 📊 Most Used Languages in My Public Repositories
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Kaden-G&layout=compact&langs_count=8&hide_border=true)
 
 ---
 
