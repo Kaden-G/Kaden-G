@@ -1,7 +1,7 @@
 # KADEN GODINEZ
 
 **Location:** Bay Area, CA  
-**MLOps & AI Infrastructure • Security • DevOps • Cloud • Java/Python**
+**AI Engineer • MLOps & AI Infrastructure • Security • DevOps • Cloud • Java/Python**
 
 Curious engineer exploring AI/ML and how it changes systems and products.
 
