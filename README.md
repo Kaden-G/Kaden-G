@@ -3,7 +3,7 @@
 # Kaden Godinez
 
 <a href="https://github.com/Kaden-G">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&duration=3500&pause=800&color=378ADD&center=true&vCenter=true&width=600&lines=Applied+AI+Engineer;I+build+agents+%E2%80%94+then+the+guardrails+to+trust+them;Curious+builder.+Marine+vet.+Lifelong+learner." alt="Applied AI Engineer" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&duration=3500&pause=800&color=378ADD&center=true&vCenter=true&width=700&lines=Applied+AI+Engineer;I+build+agents+%E2%80%94+then+the+guardrails+to+trust+them;Curious+builder.+Marine+vet.+Lifelong+learner." alt="Applied AI Engineer" />
 </a>
 
 <p>
