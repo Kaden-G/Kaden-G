@@ -98,7 +98,7 @@ A Flask app that pulls and matches asset imagery from search APIs and writes res
 - 🎓 Working toward an **MS in Information Systems Engineering** @ Johns Hopkins (data engineering focus)
 - 🏅 **JHU Applied Generative AI** certificate (2026)
 - 🏗️ Co-founder & technical lead, **Godinez Solutions LLC**
-- 🛰️ Lead Ground Systems Engineer @ Lockheed Martin — building agentic AI on the side and looking for the right Applied AI role to do it full-time
+- 🛰️ AI/ML Engineer @ Lockheed Martin
 - 📚 Usually have a sci-fi book and a half-finished side project going
 
 ---
